@@ -7,8 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+//Mark: private
+private let login = "admin"
+private let password = "admin123"
 
+
+//Mark: class
+class ViewController: UIViewController {
+    
     @IBOutlet var userLogin: UITextField!
     @IBOutlet var userPassword: UITextField!
     
@@ -68,7 +74,3 @@ class ViewController: UIViewController {
     }
 }
 
-//MARK: Private:
-
-private let login = "admin"
-private let password = "admin123"

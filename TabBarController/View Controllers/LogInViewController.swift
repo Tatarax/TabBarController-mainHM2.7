@@ -11,14 +11,20 @@ class LogInViewController: UIViewController {
 
     
     @IBOutlet var welcomeUser: UITextField!
-    @IBOutlet var emoji: UILabel!
+    @IBOutlet var infoPersonLabel: UILabel!
     
     var valueWelcomeUser: String!
     
+    private let person = Person.getPerson()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         welcomeUser.text = valueWelcomeUser
+        
+        infoPersonLabel.text = person.aboutMe
+        
+    
+        
         
     }
 }
