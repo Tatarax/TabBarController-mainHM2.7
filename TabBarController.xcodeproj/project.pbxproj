@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C451F6C29392AC9008E0727 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C451F6B29392AC9008E0727 /* LogInViewController.swift */; };
+		8C80227929563D0F00CD8441 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C80227829563D0F00CD8441 /* UserViewController.swift */; };
 		8C9627632937D607004C6D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9627622937D607004C6D8C /* AppDelegate.swift */; };
 		8C9627652937D607004C6D8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9627642937D607004C6D8C /* SceneDelegate.swift */; };
 		8C9627672937D607004C6D8C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9627662937D607004C6D8C /* HomeViewController.swift */; };
@@ -17,11 +18,11 @@
 		8CB39D71295249010082EDEE /* DetaliedInfoForPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB39D70295249010082EDEE /* DetaliedInfoForPersonViewController.swift */; };
 		8CDB110F2950F09200C896CB /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB110E2950F09200C896CB /* EventsViewController.swift */; };
 		8CDB11112950F0FD00C896CB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB11102950F0FD00C896CB /* Model.swift */; };
-		8CEEFFC82950EE160093D923 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEEFFC72950EE160093D923 /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C451F6B29392AC9008E0727 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		8C80227829563D0F00CD8441 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8C96275F2937D607004C6D8C /* TabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9627622937D607004C6D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C9627642937D607004C6D8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		8CB39D70295249010082EDEE /* DetaliedInfoForPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaliedInfoForPersonViewController.swift; sourceTree = "<group>"; };
 		8CDB110E2950F09200C896CB /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		8CDB11102950F0FD00C896CB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		8CEEFFC72950EE160093D923 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +91,9 @@
 			children = (
 				8C9627662937D607004C6D8C /* HomeViewController.swift */,
 				8C451F6B29392AC9008E0727 /* LogInViewController.swift */,
-				8CEEFFC72950EE160093D923 /* UserViewController.swift */,
 				8CDB110E2950F09200C896CB /* EventsViewController.swift */,
 				8CB39D70295249010082EDEE /* DetaliedInfoForPersonViewController.swift */,
+				8C80227829563D0F00CD8441 /* UserViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -170,9 +170,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CDB11112950F0FD00C896CB /* Model.swift in Sources */,
+				8C80227929563D0F00CD8441 /* UserViewController.swift in Sources */,
 				8CB39D71295249010082EDEE /* DetaliedInfoForPersonViewController.swift in Sources */,
 				8C451F6C29392AC9008E0727 /* LogInViewController.swift in Sources */,
-				8CEEFFC82950EE160093D923 /* UserViewController.swift in Sources */,
 				8C9627672937D607004C6D8C /* HomeViewController.swift in Sources */,
 				8C9627632937D607004C6D8C /* AppDelegate.swift in Sources */,
 				8C9627652937D607004C6D8C /* SceneDelegate.swift in Sources */,

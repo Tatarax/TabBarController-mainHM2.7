@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+final class LogInViewController: UIViewController {
 
     
     @IBOutlet var welcomeUser: UITextField!
@@ -23,11 +23,7 @@ class LogInViewController: UIViewController {
         
         infoPersonLabel.text = person.aboutMe
         
-    
-        
-        
     }
 }
 
-//  let label = UILabel(frame: CGRectMake(20, 20, 0, 0))
 
