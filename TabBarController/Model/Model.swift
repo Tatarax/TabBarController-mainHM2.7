@@ -13,7 +13,7 @@ struct Person {
     let personWork: Work
     let personHobby: Hobby
     let user: User
-    
+    let event: Events
     static func getPerson() -> Person {
        Person(aboutMe: "Меня зовут Динар, мне 26 годиков и я делаю это ДЗ уже не первую неделю, надеюсь что-то получится",
               personEducation: Education(education: "ВУЗ: Казанский Государственный архитектурно-строительный университет. Специальность: Промышленное гражданское строительство. Год окончания: 2018"),
@@ -25,7 +25,10 @@ struct Person {
                 userEmail: "agent@bk.ru",
                 userPhone: "8-999-233-33-99",
                 userLoginVk: "agent3399",
-                userPasswordVk: "admin3399"))
+                userPasswordVk: "admin3399"),
+              event: Events(birthdayCat: "cats",
+                            movies: "movies",
+                            flightPlane: "plane"))
     }
 }
 
@@ -46,4 +49,10 @@ struct User {
     let userPhone: String
     let userLoginVk: String
     let userPasswordVk: String
+}
+
+struct Events {
+    let birthdayCat: String
+    let movies: String
+    let flightPlane: String
 }
