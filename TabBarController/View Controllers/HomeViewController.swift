@@ -18,10 +18,15 @@ class ViewController: UIViewController {
     @IBOutlet var userLogin: UITextField!
     @IBOutlet var userPassword: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         
+        getColor()
+        
     }
+    
+    
+    
     
 // MARK: Work with segue:
     
@@ -72,5 +77,23 @@ class ViewController: UIViewController {
         
         present(passwordAlertController, animated: true)
     }
+    
+   
+    
 }
-
+ 
+extension UIViewController {
+    func getColor() {
+        let fisrtColor = UIColor(red: 150/200, green: 65/125, blue: 200/255, alpha: 1).cgColor
+        let secondColor = UIColor(red: 65/138, green: 200/90, blue: 110/255, alpha: 1).cgColor
+        
+        let gradientColor = CAGradientLayer()
+        gradientColor.frame = self.view.bounds
+        gradientColor.colors = [fisrtColor, secondColor]
+        gradientColor.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientColor.endPoint = CGPoint(x: 0.5, y: 1.0)
+        self.view.layer.insertSublayer(gradientColor, at: 0)
+    }
+    
+    
+}

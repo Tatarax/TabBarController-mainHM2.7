@@ -17,11 +17,17 @@ final class LogInViewController: UIViewController {
     
     private let person = Person.getPerson()
     
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeUser.text = valueWelcomeUser
         
         infoPersonLabel.text = person.aboutMe
+        
+        getColor()
+        
+        
         
     }
 }

@@ -21,6 +21,9 @@ class DetaliedInfoForPersonViewController: UIViewController {
         educationLabel.text = person.personEducation.education
         workLabel.text = person.personWork.work
         hobbyLabel.text = person.personHobby.hobby
+        
+        getColor()
+        
     
     }
     
