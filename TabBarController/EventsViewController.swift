@@ -23,6 +23,7 @@ class EventsViewController: UIViewController {
         walkMoviesImage.image = UIImage(named: person.event.movies)
         flightPlaneImage.image = UIImage(named: person.event.flightPlane)
        
+        getColor()
     }
 
 }

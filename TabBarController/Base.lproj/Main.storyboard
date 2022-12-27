@@ -103,7 +103,7 @@
         <!--User-->
         <scene sceneID="AEZ-F9-MeM">
             <objects>
-                <viewController id="dw2-AI-nSd" customClass="UserViewController" customModule="TabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="dw2-AI-nSd" customClass="UserViewController" customModule="TabBarController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jr9-Ws-tey">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,9 +202,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pr-ec-70e">
-                                <rect key="frame" x="87" y="508" width="200" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pr-ec-70e">
+                                <rect key="frame" x="-1" y="485" width="377" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3pr-ec-70e" secondAttribute="height" multiplier="100:13" id="X9R-1V-RAh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Exit"/>
@@ -212,40 +214,57 @@
                                     <segue destination="I3w-rI-xwt" kind="unwind" unwindAction="unwindFor:" id="wM3-f6-el5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiP-lG-nl7">
-                                <rect key="frame" x="87" y="332" width="200" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="More"/>
-                                <connections>
-                                    <segue destination="I2Y-AY-ZDp" kind="show" id="9f7-eC-8Mg"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtN-19-xVO">
-                                <rect key="frame" x="157" y="46" width="60.5" height="31.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="   " textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="SMf-BT-qEb">
-                                <rect key="frame" x="217" y="46" width="17" height="31.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqu-h2-AdA">
-                                <rect key="frame" x="52" y="130" width="271" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="Wuc-Yi-LRy">
+                                <rect key="frame" x="20" y="45" width="335" height="306"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsz-eB-XwE">
+                                        <rect key="frame" x="129" y="0.0" width="77.5" height="42"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtN-19-xVO">
+                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="   " textAlignment="center" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="SMf-BT-qEb">
+                                                <rect key="frame" x="60.5" y="0.0" width="17" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqu-h2-AdA">
+                                        <rect key="frame" x="97" y="132" width="141" height="42"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bqu-h2-AdA" secondAttribute="height" multiplier="165:49" id="eTF-dx-5Mn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiP-lG-nl7">
+                                        <rect key="frame" x="139.5" y="264" width="56" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="More"/>
+                                        <connections>
+                                            <segue destination="I2Y-AY-ZDp" kind="show" id="9f7-eC-8Mg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J90-Og-xbl"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J90-Og-xbl" firstAttribute="bottom" secondItem="3pr-ec-70e" secondAttribute="bottom" constant="64" id="3It-Mq-SMC"/>
+                            <constraint firstItem="3pr-ec-70e" firstAttribute="leading" secondItem="quP-o5-JJ4" secondAttribute="leadingMargin" constant="-17" id="BYH-mD-lb5"/>
+                            <constraint firstItem="J90-Og-xbl" firstAttribute="trailing" secondItem="Wuc-Yi-LRy" secondAttribute="trailing" constant="20" id="FGR-Qc-ZXx"/>
+                            <constraint firstItem="Wuc-Yi-LRy" firstAttribute="leading" secondItem="J90-Og-xbl" secondAttribute="leading" constant="20" id="MiP-WN-hTs"/>
+                            <constraint firstItem="Wuc-Yi-LRy" firstAttribute="top" secondItem="J90-Og-xbl" secondAttribute="top" constant="45" id="WyZ-yc-nbk"/>
+                            <constraint firstItem="3pr-ec-70e" firstAttribute="centerX" secondItem="J90-Og-xbl" secondAttribute="centerX" id="dUQ-B2-dQV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="5av-y0-g8f"/>
                     <navigationItem key="navigationItem" id="Fwy-xa-UBz"/>
@@ -262,7 +281,7 @@
         <!--Events-->
         <scene sceneID="olp-lV-c1I">
             <objects>
-                <viewController id="aE5-1i-8v8" customClass="EventsViewController" customModule="TabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="aE5-1i-8v8" customClass="EventsViewController" customModule="TabBarController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lXF-Kg-R6F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -357,13 +376,13 @@
         <!--Detalied Info For Person View Controller-->
         <scene sceneID="SP7-5b-xku">
             <objects>
-                <viewController id="I2Y-AY-ZDp" customClass="DetaliedInfoForPersonViewController" customModule="TabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="I2Y-AY-ZDp" customClass="DetaliedInfoForPersonViewController" customModule="TabBarController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W2u-SY-gof">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OUB-xF-ny4">
-                                <rect key="frame" x="20" y="558" width="335" height="59"/>
+                                <rect key="frame" x="20" y="578" width="335" height="59"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Хобби" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKY-4K-X8H">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
@@ -397,7 +416,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pqK-5T-x6R">
-                                <rect key="frame" x="20" y="286.5" width="335" height="74"/>
+                                <rect key="frame" x="20" y="296.5" width="335" height="74"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Деятельность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aet-qz-0Vf">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
@@ -443,7 +462,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="9vl-NH-veE">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PUZ-CJ-J61" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PUZ-CJ-J61" customClass="TabBarController" customModule="TabBarController" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="mqA-H9-EOg"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hWQ-wG-jG8">

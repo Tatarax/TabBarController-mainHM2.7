@@ -23,6 +23,8 @@ class UserViewController: UIViewController {
         userNumberPhone.text = person.user.userPhone
         userLoginVk.text = person.user.userLoginVk
         userPasswordVk.text = person.user.userPasswordVk
+        
+        getColor()
 
     }
 
