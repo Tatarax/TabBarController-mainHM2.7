@@ -27,6 +27,9 @@ class DetaliedInfoForPersonViewController: UIViewController {
     
     }
     
-
-
+        
+    @IBAction func buttonBack() {
+        dismiss(animated: true)
+    }
+    
 }

@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  StartViewController.swift
 //  TabBarController
 //
-//  Created by Dinar on 30.11.2022.
+//  Created by Dinar on 28.12.2022.
 //
 
 import UIKit
@@ -11,10 +11,8 @@ import UIKit
 private let login = "admin"
 private let password = "admin123"
 
+class StartViewController: UIViewController {
 
-//Mark: class
-class LogInViewController: UIViewController {
-    
     @IBOutlet var userLogin: UITextField!
     @IBOutlet var userPassword: UITextField!
     
@@ -75,4 +73,20 @@ class LogInViewController: UIViewController {
     }
 
 
+extension UIViewController {
+    func getColor() {
+        let fisrtColor = UIColor(red: 150/200, green: 65/125, blue: 200/255, alpha: 1).cgColor
+        let secondColor = UIColor(red: 65/138, green: 200/90, blue: 110/255, alpha: 1).cgColor
+        let threeColor = UIColor(red: 115/230, green: 205/255, blue: 215/200, alpha: 1).cgColor
+        
+        let gradientColor = CAGradientLayer()
+        gradientColor.frame = self.view.bounds
+        gradientColor.colors = [fisrtColor, secondColor, threeColor]
+        gradientColor.startPoint = CGPoint(x: 0.0, y: 0.0)
+        gradientColor.endPoint = CGPoint(x: 0.5, y: 1.0)
+        self.view.layer.insertSublayer(gradientColor, at: 0)
+    }
+    
+    
+}
 
